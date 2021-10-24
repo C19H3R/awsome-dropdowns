@@ -17,16 +17,22 @@ body {
   display: inline-block;
   position: relative;
   margin: 5px;
+  width: fit-content;
+  /* width: 10px; */
+  /* background-color: black; */
+  /* border-radius: 5px; */
+
 }
 .black-awsome-dropdown > :nth-child(1) {
   background-color: black;
-  color: white;
   border-radius: 5px;
+  color: white;
   display: flex;
-  gap: 30px;
   justify-content: space-between;
+  gap: 30px;
   padding: 10px;
   cursor: pointer;
+  /* width: fit-content; */
 }
 .black-awsome-dropdown > :nth-child(1) > :nth-child(2) {
   transform: rotate(0deg);
@@ -35,8 +41,11 @@ body {
 .black-awsome-dropdown > :nth-child(2) {
   position: absolute;
   display: inline-block;
+  
   min-width: 100%;
   max-width: fit-content;
+  /* width: 100%; */
+  left: 0px;
   overflow: hidden;
   z-index: 2;
 }
@@ -44,7 +53,6 @@ body {
 .black-awsome-dropdown > :nth-child(2) > ul {
   width: 100%;
   position: relative;
-  right: 0px;
   padding-left: 0px;
   margin: 0;
   transition: transform 100ms ease-in-out;
@@ -55,6 +63,7 @@ body {
   color: black;
   list-style-type: none;
   padding: 5px 15px;
+  text-align: left;
 }
 .black-awsome-dropdown > :nth-child(2) > ul > li:hover {
   background-color: rgb(194, 194, 194);
@@ -63,9 +72,9 @@ body {
   background-color: rgb(51, 51, 51);
   color: white;
 }
-.black-awsome-dropdown:active > :nth-child(2) > ul {
+.black-awsome-dropdown.clicked > :nth-child(2) > ul {
   transform: translateY(0px);
 }
-.black-awsome-dropdown:active > :nth-child(1) > :nth-child(2) {
+.black-awsome-dropdown.clicked > :nth-child(1) > :nth-child(2) {
   transform: rotate(180deg);
 }
