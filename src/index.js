@@ -13,11 +13,11 @@ getAllDropdowns.forEach((item) => {
   options.forEach((opt) => {
     opt.addEventListener("click", () => {
       const value = opt.textContent;
-      item.dispatchEvent(new Event("change"));
       item.setAttribute("value", value);
       item.classList.toggle("clicked");
       const optionSpan = divs[0].getElementsByTagName("span")[0];
       optionSpan.textContent = value;
+      item.dispatchEvent(new Event("change"));
     });
   });
 
